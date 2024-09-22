@@ -110,8 +110,13 @@ try {
 
     const Post = mongoose.model("post", model);
 
+    const start = moment().startOf("day").toDate();
+
     const posts = await Post.find({
       user: info._id,
+      createdAt: {
+        $gte: start,
+      },
     }).sort({ date: 1 });
 
     for (let index = 0; index < posts.length; index++) {
