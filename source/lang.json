@@ -1,0 +1,38 @@
+{
+    "ru": {
+        "start": "📌 Новое напоминание. Например:",
+        "lang": "🗣 Выбери язык",
+        "delay": "⏱ За сколько часов напомнить?",
+        "main_page": "Главная страница",
+        "today": "Планы на сегодня",
+        "tomorrow": "Планы на завтра",
+        "expire": "Вышло время"
+    },
+    "ar": {
+        "start": "📌 تذكير جديد. على سبيل المثال:",
+        "lang": "🗣 اختر اللغة",
+        "delay": "⏱ في غضون ساعات كم تود أن تذكّر؟",
+        "main_page": "الصفحة الرئيسية",
+        "today": "خطط اليوم",
+        "tomorrow": "خطط الغد",
+        "expire": "انتهي الوقت"
+    },
+    "en": {
+        "start": "📌 New reminder. For example:",
+        "lang": "🗣 Choose a language",
+        "delay": "⏱ In how many hours should I remind you?",
+        "main_page": "Main page",
+        "today": "Plans for today",
+        "tomorrow": "Plans for tomorrow",
+        "expire": "Time has expired"
+    },
+    "fr": {
+        "start": "📌 Nouveau rappel. Par exemple :",
+        "lang": "🗣 Choisissez une langue",
+        "delay": "⏱ Dans combien d'heures vous rappeler ?",
+        "main_page": "Page d'accueil",
+        "today": "Plans pour aujourd'hui",
+        "tomorrow": "Plans pour demain",
+        "expire": "Le temps est écoulé"
+    }
+}

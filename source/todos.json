@@ -1,0 +1,242 @@
+[
+      {
+        "todo": {
+          "ru": "Сделай что-то хорошее для кого-то, кого ты ценишь \n#доброта",
+          "en": "Do something nice for someone you appreciate \n#kindness",
+          "fr": "Fais quelque chose de bien pour quelqu'un que tu apprécies \n#bonté",
+          "ar": "افعل شيئًا لطيفًا لشخص تقدره \n#لطف"
+        }
+      },
+      {
+        "todo": {
+          "ru": "Выучи стихотворение \n#искусство",
+          "en": "Learn a poem \n#art",
+          "fr": "Apprends un poème \n#art",
+          "ar": "تعلم قصيدة \n#فن"
+        }
+      },
+      {
+        "todo": {
+          "ru": "Посмотри классический фильм \n#кино",
+          "en": "Watch a classic movie \n#cinema",
+          "fr": "Regarde un film classique \n#cinéma",
+          "ar": "شاهد فيلم كلاسيكي \n#سينما"
+        }
+      },
+      {
+        "todo": {
+          "ru": "Посмотри документальный фильм \n#образование",
+          "en": "Watch a documentary \n#education",
+          "fr": "Regarde un documentaire \n#éducation",
+          "ar": "شاهد فيلم وثائقي \n#تعليم"
+        }
+      },
+      {
+        "todo": {
+          "ru": "Инвестируй в криптовалюту \n#финансы",
+          "en": "Invest in cryptocurrency \n#finance",
+          "fr": "Investis dans la cryptomonnaie \n#finance",
+          "ar": "استثمر في العملات المشفرة \n#مالية"
+        }
+      },
+      {
+        "todo": {
+          "ru": "Пожертвуй код или деньги проекту с открытым исходным кодом \n#технологии",
+          "en": "Donate code or money to an open-source project \n#technology",
+          "fr": "Fais un don de code ou d'argent à un projet open-source \n#technologie",
+          "ar": "تبرع بالشفرة أو المال لمشروع مفتوح المصدر \n#تكنولوجيا"
+        }
+      },
+      {
+        "todo": {
+          "ru": "Реши кубик Рубика \n#головоломка",
+          "en": "Solve a Rubik's cube \n#puzzle",
+          "fr": "Résous un Rubik's cube \n#puzzle",
+          "ar": "حل مكعب روبيك \n#ألغاز"
+        }
+      },
+      {
+        "todo": {
+          "ru": "Испеки выпечку для себя и соседа \n#выпечка",
+          "en": "Bake something for yourself and your neighbor \n#baking",
+          "fr": "Fais de la pâtisserie pour toi et ton voisin \n#pâtisserie",
+          "ar": "اخبز شيئًا لنفسك وجارك \n#خبز"
+        }
+      },
+      {
+        "todo": {
+          "ru": "Сходи на бродвейскую постановку \n#театр",
+          "en": "Go to a Broadway show \n#theater",
+          "fr": "Va voir une pièce à Broadway \n#théâtre",
+          "ar": "اذهب إلى عرض برودواي \n#مسرح"
+        }
+      },
+      {
+        "todo": {
+          "ru": "Напиши благодарственное письмо влиятельному человеку в твоей жизни \n#благодарность",
+          "en": "Write a thank-you letter to someone influential in your life \n#gratitude",
+          "fr": "Écris une lettre de remerciement à une personne influente dans ta vie \n#gratitude",
+          "ar": "اكتب رسالة شكر لشخص مؤثر في حياتك \n#امتنان"
+        }
+      },
+      {
+        "todo": {
+          "ru": "Пригласи друзей на вечер игр \n#развлечение",
+          "en": "Invite friends over for game night \n#entertainment",
+          "fr": "Invite des amis pour une soirée jeux \n#divertissement",
+          "ar": "ادع أصدقاءك لقضاء ليلة ألعاب \n#ترفيه"
+        }
+      },
+      {
+        "todo": {
+          "ru": "Проведи футбольный матч с друзьями \n#спорт",
+          "en": "Have a football match with friends \n#sport",
+          "fr": "Organise un match de football avec des amis \n#sport",
+          "ar": "قم بمباراة كرة القدم مع الأصدقاء \n#رياضة"
+        }
+      },
+      {
+        "todo": {
+          "ru": "Напиши другу, с которым давно не общался \n#друзья",
+          "en": "Write to a friend you haven't talked to in a while \n#friends",
+          "fr": "Écris à un ami avec qui tu n'as pas parlé depuis longtemps \n#amis",
+          "ar": "اكتب لصديق لم تتحدث إليه منذ فترة \n#أصدقاء"
+        }
+      },
+      {
+        "todo": {
+          "ru": "Упорядочи свою кладовку \n#организация",
+          "en": "Organize your pantry \n#organization",
+          "fr": "Organise ton garde-manger \n#organisation",
+          "ar": "نظم مخبأ طعامك \n#تنظيم"
+        }
+      },
+      {
+        "todo": {
+          "ru": "Купи новуюDecor для дома \n#декор",
+          "en": "Buy new decor for your home \n#decor",
+          "fr": "Achète une nouvelle décoration pour ta maison \n#déco",
+          "ar": "اشترِ ديكورًا جديدًا لمنزلك \n#ديكور"
+        }
+      },
+      {
+        "todo": {
+          "ru": "Запланируй отпуск, о котором всегда мечтал \n#путешествия",
+          "en": "Plan a vacation you have always dreamed of \n#travel",
+          "fr": "Planifie des vacances dont tu as toujours rêvé \n#voyages",
+          "ar": "خطط لعطلة لطالما حلمت بها \n#سفر"
+        }
+      },
+      {
+        "todo": {
+          "ru": "Убери в машине \n#уборка",
+          "en": "Clean out your car \n#cleaning",
+          "fr": "Nettoie ta voiture \n#nettoyage",
+          "ar": "نظف سيارتك \n#تنظيف"
+        }
+      },
+      {
+        "todo": {
+          "ru": "Нарисуй и раскрась мандалу \n#искусство",
+          "en": "Draw and color a mandala \n#art",
+          "fr": "Dessine et colorie une mandala \n#art",
+          "ar": "ارسم وزين ماندالا \n#فن"
+        }
+      },
+      {
+        "todo": {
+          "ru": "Создай кулинарную книгу с любимыми рецептами \n#кулинария",
+          "en": "Create a cookbook of your favorite recipes \n#cooking",
+          "fr": "Crée un livre de recettes de tes plats préférés \n#cuisine",
+          "ar": "أنشئ كتاب طبخ لوصفاتك المفضلة \n#طبخ"
+        }
+      },
+      {
+        "todo": {
+          "ru": "Испеки пирог с друзьями \n#выпечка",
+          "en": "Bake a pie with friends \n#baking",
+          "fr": "Fais une tarte avec des amis \n#pâtisserie",
+          "ar": "اخبز فطيرة مع الأصدقاء \n#خبز"
+        }
+      },
+      {
+        "todo": {
+          "ru": "Создай компостную кучу \n#экология",
+          "en": "Create a compost pile \n#ecology",
+          "fr": "Crée un tas de compost \n#écologie",
+          "ar": "أنشئ كومة من السماد \n#بيئة"
+        }
+      },
+      {
+        "todo": {
+          "ru": "Сходи в поход в местном парке \n#природа",
+          "en": "Go for a hike in a local park \n#nature",
+          "fr": "Pars en randonnée dans un parc local \n#nature",
+          "ar": "اذهب في نزهة في حديقة محلية \n#طبيعة"
+        }
+      },
+      {
+        "todo": {
+          "ru": "Посети занятие в местном центре, которое тебя интересует \n#обучение",
+          "en": "Attend a class at a local center that interests you \n#learning",
+          "fr": "Assiste à un cours dans un centre local qui t'intéresse \n#apprentissage",
+          "ar": "احضر صفًا في مركز محلي يثير اهتمامك \n#تعليم"
+        }
+      },
+      {
+        "todo": {
+          "ru": "Изучи интересующую тему \n#образование",
+          "en": "Study a topic that interests you \n#education",
+          "fr": "Étudie un sujet qui t'intéresse \n#éducation",
+          "ar": "ادرس موضوعًا يثير اهتمامك \n#تعليم"
+        }
+      },
+      {
+        "todo": {
+          "ru": "Запланируй поездку в другую страну \n#путешествия",
+          "en": "Plan a trip to another country \n#travel",
+          "fr": "Planifie un voyage dans un autre pays \n#voyages",
+          "ar": "خطط لرحلة إلى دولة أخرى \n#سفر"
+        }
+      },
+      {
+        "todo": {
+          "ru": "Улучшай навыки слепой печати \n#навыки",
+          "en": "Improve your touch typing skills \n#skills",
+          "fr": "Améliore tes compétences en dactylographie \n#compétences",
+          "ar": "حسن مهاراتك في الكتابة باللمس \n#مهارات"
+        }
+      },
+      {
+        "todo": {
+          "ru": "Научись Express.js \n#программирование",
+          "en": "Learn Express.js \n#programming",
+          "fr": "Apprends Express.js \n#programmation",
+          "ar": "تعلّم Express.js \n#برمجة"
+        }
+      },
+      {
+        "todo": {
+          "ru": "Научись каллиграфии \n#искусство",
+          "en": "Learn calligraphy \n#art",
+          "fr": "Apprends la calligraphie \n#art",
+          "ar": "تعلم الخط العربي \n#فن"
+        }
+      },
+      {
+        "todo": {
+          "ru": "Проведи фотосессию с друзьями \n#фотография",
+          "en": "Have a photo session with friends \n#photography",
+          "fr": "Fais une séance photo avec des amis \n#photographie",
+          "ar": "قم بجلسة تصوير مع الأصدقاء \n#تصوير"
+        }
+      },
+      {
+        "todo": {
+          "ru": "Сходи в спортзал \n#спорт",
+          "en": "Go to the gym \n#sport",
+          "fr": "Va à la salle de sport \n#sport",
+          "ar": "اذهب إلى صالة الألعاب الرياضية \n#رياضة"
+        }
+      }
+    ]
