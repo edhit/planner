@@ -55,40 +55,74 @@ try {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 
-//   async function Update() {
-//     try {
-//         console.log('update 2 sec');
-//         const Post = mongoose.model("post", model);
-  
-//         const posts = await Post.find({
-//           message_id: null,
-//           status: null,
-//         }).sort({ date: 1 }).populate('user');
+  //   async function Update() {
+  //     try {
+  //         console.log('update 2 sec');
+  //         const Post = mongoose.model("post", model);
 
-//         console.log(posts);
-  
-//         let message_id = [];
-//         for (let index = 0; index < posts.length; index++) {
-//           let update = await bot.telegram.sendMessage(
-//             posts[index].user.telegram,
-//             `${posts[index].date}\n\n${posts[index].text}`,
-//           );
-//           await bot.telegram.pinChatMessage(posts[index].user.telegram, update.message_id);
-//           message_id.push(update.message_id);
-//         }
-  
-//         for (let index = 0; index < posts.length; index++) {
-//           await Post.findOneAndUpdate(
-//             { _id: posts[index]._id },
-//             { message_id: message_id[index] },
-//           );
-//         }
+  //         const posts = await Post.find({
+  //           message_id: null,
+  //           status: null,
+  //         }).sort({ date: 1 }).populate('user');
 
-//         setTimeout(Update, 2000)
-//       } catch (error) {
-//         console.log(error);
-//       }
-//   }
+  //         console.log(posts);
+
+  //         let message_id = [];
+  //         for (let index = 0; index < posts.length; index++) {
+  //           let update = await bot.telegram.sendMessage(
+  //             posts[index].user.telegram,
+  //             `${posts[index].date}\n\n${posts[index].text}`,
+  //           );
+  //           await bot.telegram.pinChatMessage(posts[index].user.telegram, update.message_id);
+  //           message_id.push(update.message_id);
+  //         }
+
+  //         for (let index = 0; index < posts.length; index++) {
+  //           await Post.findOneAndUpdate(
+  //             { _id: posts[index]._id },
+  //             { message_id: message_id[index] },
+  //           );
+  //         }
+
+  //         setTimeout(Update, 2000)
+  //       } catch (error) {
+  //         console.log(error);
+  //       }
+  //   }
+
+  async function Update(ctx) {
+    try {
+      await ctx.deleteMessage();
+
+      const User = mongoose.model("user", user);
+
+      const info = await User.findOne({ telegram: ctx.from.id });
+
+      const Post = mongoose.model("post", model);
+
+      const posts = await Post.find({
+        user: info._id,
+        message_id: null,
+        status: null,
+      }).sort({ date: 1 });
+
+      let message_id = [];
+      for (let index = 0; index < posts.length; index++) {
+        let update = await ctx.reply(
+          `${posts[index].date}\n\n${posts[index].text}`,
+        );
+        await ctx.pinChatMessage(update.message_id);
+        message_id.push(update.message_id);
+      }
+
+      for (let index = 0; index < posts.length; index++) {
+        await Post.findOneAndUpdate(
+          { _id: posts[index]._id },
+          { message_id: message_id[index] },
+        );
+      }
+    } catch (error) {}
+  }
 
   // JSONS
   const todos = require("./source/todos.json");
@@ -96,15 +130,15 @@ try {
 
   // USER
 
-//   Update()
+  //   Update()
   bot.telegram.setMyCommands([
     {
       command: "start",
       description: "Главная страница",
     },
     {
-      command: "update",
-      description: "обновить список напоминаний на день",
+      command: "plans",
+      description: "Обновить список напоминаний на день",
     },
   ]);
   bot.use(session({ defaultSession: () => ({ date: "", text: "" }) }));
@@ -133,37 +167,7 @@ try {
   });
 
   bot.command("plans", async (ctx) => {
-    try {
-        await ctx.deleteMessage()
-
-        const User = mongoose.model("user", user);
-  
-        const info = await User.findOne({ telegram: ctx.from.id });
-  
-        const Post = mongoose.model("post", model);
-
-        const posts = await Post.find({
-          user: info._id, 
-          message_id: null,
-          status: null,
-        }).sort({ date: 1 });
-  
-        let message_id = [];
-        for (let index = 0; index < posts.length; index++) {
-          let update = await ctx.reply(
-            `${posts[index].date}\n\n${posts[index].text}`,
-          );
-          await ctx.pinChatMessage(update.message_id);
-          message_id.push(update.message_id);
-        }
-  
-        for (let index = 0; index < posts.length; index++) {
-          await Post.findOneAndUpdate(
-            { _id: posts[index]._id },
-            { message_id: message_id[index] },
-          );
-        }
-      } catch (error) {}
+    await Update(ctx);
   });
 
   bot.on("callback_query", async (ctx) => {
@@ -196,6 +200,8 @@ try {
 
           ctx.session.text = "";
           ctx.session.date = "";
+
+          await Update(ctx);
         }
       }
     } catch (error) {}
@@ -222,7 +228,8 @@ try {
           message_id: ctx.update.message_id,
         },
         {
-          status: (ctx.update.message_reaction.new_reaction[0].emoji === '👍') ? 1 : 2,
+          status:
+            ctx.update.message_reaction.new_reaction[0].emoji === "👍" ? 1 : 2,
         },
       );
 
