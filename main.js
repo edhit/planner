@@ -46,7 +46,6 @@ try {
       date: String,
       delay: Number,
       user: { type: Schema.Types.ObjectId, ref: "User" },
-      status: Number,
     },
     { timestamps: true },
   );
@@ -75,17 +74,9 @@ try {
       description: "Главная страница",
     },
     {
-      command: "today",
-      description: "Планы на сегодня",
-    },
-    {
-      command: "tomorrow",
-      description: "Планы на завтра",
-    },
-    {
-      command: "expire",
-      description: "Вышло время",
-    },
+      command: "plans",
+      description: "Планы",
+    }
   ]);
   bot.use(
     session({ defaultSession: () => ({ date: "", text: "", delay: "" }) }),
@@ -112,72 +103,19 @@ try {
     );
   });
 
-  bot.command("today", async (ctx) => {
+  bot.command("plans", async (ctx) => {
     const User = mongoose.model("user", user);
 
     const info = User.findOne({ telegram: ctx.from.id });
 
     const Post = mongoose.model("post", model);
 
-    const start = moment().startOf("day").toDate();
-    const end = moment().startOf("day").add(1, "day").toDate();
-
     const posts = await Post.find({
       user: info._id,
-      createdAt: {
-        $gte: start,
-        $lt: end,
-      },
     }).sort({ date: 1 });
 
     for (let index = 0; index < posts.length; index++) {
-      await ctx.reply(`⏱Дата: ${posts[index].date}\n${posts[index].text}`);
-    }
-  });
-
-  bot.command("tomorrow", async (ctx) => {
-    const User = mongoose.model("user", user);
-
-    const info = User.findOne({ telegram: ctx.from.id });
-
-    const Post = mongoose.model("post", model);
-
-    const start = moment().startOf("day").add(1, "day").toDate();
-    const end = moment().startOf("day").add(2, "day").toDate();
-
-    const posts = await Post.find({
-      user: info._id,
-      createdAt: {
-        $gte: start,
-        $lt: end,
-      },
-    }).sort({ date: 1 });
-
-    for (let index = 0; index < posts.length; index++) {
-      await ctx.reply(`⏱Дата: ${posts[index].date}\n${posts[index].text}`);
-    }
-  });
-
-  bot.command("expire", async (ctx) => {
-    const User = mongoose.model("user", user);
-
-    const info = User.findOne({ telegram: ctx.from.id });
-
-    const Post = mongoose.model("post", model);
-
-    const start = moment("1970-01-01").startOf("day").toDate();
-    const end = moment().startOf("day").toDate();
-
-    const posts = await Post.find({
-      user: info._id,
-      createdAt: {
-        $gte: start,
-        $lt: end,
-      },
-    }).sort({ date: 1 });
-
-    for (let index = 0; index < posts.length; index++) {
-      await ctx.reply(`⏱Дата: ${posts[index].date}\n${posts[index].text}`);
+      await ctx.reply(`${posts[index].date}\n\n${posts[index].text}`);
     }
   });
 
